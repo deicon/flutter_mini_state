@@ -4,7 +4,7 @@ description: |
   using get_it as a service locator and the built in ValueNotifier to 
   manage state in a flutter application
 
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/deicon/flutter_mini_state
 repository: https://github.com/deicon/flutter_mini_state
 
