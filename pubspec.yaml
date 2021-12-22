@@ -1,6 +1,6 @@
 name: ministate
 description: Minimalistic State Management using ServiceLocator 
-version: 0.0.2
+version: 0.0.3
 homepage: https://www.deicon.de/ministate
 repository: https://github.com/deicon/flutter_mini_state
 
