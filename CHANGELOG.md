@@ -6,3 +6,7 @@ This first release contains
 
 * StateHolder abstraction holding logic
 * MiniStateBuilder Widget
+
+## 0.0.1
+
+* Adjusting Example code. Fixing Bug
