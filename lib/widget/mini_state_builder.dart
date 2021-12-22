@@ -4,8 +4,7 @@ import 'package:get_it/get_it.dart';
 typedef StateBuilder<STATE> = Widget Function(
     BuildContext context, STATE value, Widget? child);
 
-typedef StateListener<STATE> = Widget Function(
-    BuildContext context, STATE value);
+typedef StateListener<STATE> = void Function(BuildContext context, STATE value);
 
 class MiniStateBuilder<STATEHOLDER extends Object, STATE>
     extends StatelessWidget {
