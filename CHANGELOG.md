@@ -12,3 +12,8 @@ This first release contains
 ## 0.0.3
 
 * Adjusting Example code. Fixing Bug
+
+## 0.0.4
+
+* Adding some comments
+* depend on Dart 2.15.0
