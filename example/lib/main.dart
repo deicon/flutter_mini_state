@@ -67,6 +67,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var stateholder = stateHolder<CounterStateHolder>();
     return Scaffold(
       body: Center(
         child: Column(
@@ -84,7 +85,7 @@ class MyHomePage extends StatelessWidget {
               if (value.counter == 10) {
                 // reset by explicitly setting states value
                 // told ya. minimalistic approach.
-                stateHolder<CounterStateHolder>().setState(const SomeState(0));
+                stateholder.setState(const SomeState(0));
               }
             }, builder: (ctx, value, stateHolder, child) {
               return Text(
@@ -98,13 +99,13 @@ class MyHomePage extends StatelessWidget {
       persistentFooterButtons: [
         ElevatedButton(
           onPressed: () {
-            stateHolder<CounterStateHolder>().decrement();
+            stateholder.decrement();
           },
           child: const Text("-"),
         ),
         ElevatedButton(
           onPressed: () {
-            stateHolder<CounterStateHolder>().increment();
+            stateholder.increment();
           },
           child: const Text("+"),
         ),
