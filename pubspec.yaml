@@ -1,11 +1,15 @@
 name: ministate
-description: Minimalistic State Management using ServiceLocator 
-version: 0.0.3
-homepage: https://www.deicon.de/ministate
+description: | 
+  Minimalistic State Management 
+  using get_it as a service locator and the built in ValueNotifier to 
+  manage state in a flutter application
+
+version: 0.0.4
+homepage: https://github.com/deicon/flutter_mini_state
 repository: https://github.com/deicon/flutter_mini_state
 
 environment:
-  sdk: ">=2.15.1 <3.0.0"
+  sdk: ">=2.15.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
