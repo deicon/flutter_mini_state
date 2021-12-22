@@ -47,7 +47,16 @@ So first define a Service class. This should be the place to talk to backend ser
 persistence on the device. 
 
 ```dart
-class BackendService {}
+class BackendService {
+  void saveState() {
+    // magically save state in some storage
+  }
+
+  Future<SomeState> retrieveLastState() async {
+    // maybe save it to sqlite or firebase
+    return const SomeState(0);
+  }
+}
 ```
 
 Then the StateHolder class to bind it all together. StateHolder class is derived from _DefaultStateHolder_ and 
@@ -65,10 +74,16 @@ class CounterStateHolder extends DefaultStateHolder<SomeState, BackendService> {
 
   // define mutation methods
   void increment() {
-    // create new state derive from old value/state
+    // create new state derived from old value/state
+    var nextState = SomeState(value.counter + 1);
+    
+    // using backendService to save State somewhere
+    getService().saveState(nextState);
+    
     // calling setState triggers re rendering
-    setState(SomeState(value.counter + 1));
+    setState(nextState);
   }
+
 
   void decrement() {
     // create new state derive from old value/state

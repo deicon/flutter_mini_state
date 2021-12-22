@@ -15,7 +15,15 @@ class SomeState extends Equatable {
 }
 
 // Some class used as Service it needed
-class BackendService {}
+class BackendService {
+  void saveState(SomeState state) {
+    // magically save state in some storage
+  }
+
+  Future<SomeState> retrieveLastState() async {
+    return const SomeState(0);
+  }
+}
 
 // Define the StateHolder and derive from GetItStateHolder
 class CounterStateHolder extends DefaultStateHolder<SomeState, BackendService> {
@@ -25,7 +33,10 @@ class CounterStateHolder extends DefaultStateHolder<SomeState, BackendService> {
   void increment() {
     // create new state derive from old value/state
     // calling setState triggers re rendering
-    setState(SomeState(value.counter + 1));
+    var nextState = SomeState(value.counter + 1);
+    // using backendService to save State somewhere
+    getService().saveState(nextState);
+    setState(nextState);
   }
 
   void decrement() {
