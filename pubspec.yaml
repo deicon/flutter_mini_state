@@ -1,7 +1,7 @@
 name: ministate
 description: Minimalist State Management using ServiceLocator 
 version: 0.0.1
-homepage: https://www.deicon.de
+homepage: https://github.com/deicon/flutter_mini_state
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
