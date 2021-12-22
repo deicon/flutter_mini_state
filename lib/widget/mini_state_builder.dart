@@ -7,6 +7,8 @@ typedef StateBuilder<STATEHOLDER extends StateHolder, STATE> = Widget Function(
 
 typedef StateListener<STATE> = void Function(BuildContext context, STATE value);
 
+// MiniStateBuilder for STATEHOLDER and STATE which
+// automatically rebuilds once state changes
 class MiniStateBuilder<STATEHOLDER extends StateHolder, STATE>
     extends StatelessWidget {
   final StateBuilder builder;
