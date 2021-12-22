@@ -89,7 +89,7 @@ class MyHomePage extends StatelessWidget {
             ),
             // make sure the state triggers rendering once changed
             // by using the MiniStateBuilder
-            MiniStateBuilder<CounterStateHolder, Counter>(
+            MiniStateBuilder<CounterStateHolder, SomeState>(
                 listener: (context, value) {
               // react here on specific states just before rendering the
               // new state

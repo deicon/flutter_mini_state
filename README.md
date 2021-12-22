@@ -117,7 +117,7 @@ To display states and react on state changes use
 // using provided stateHolder<> method
 var stateholder = stateHolder<CounterStateHolder>();
 ...
-MiniStateBuilder<CounterStateHolder, Counter>(
+MiniStateBuilder<CounterStateHolder, SomeState>(
         listener: (context, value) {
             // react here on specific states just before rendering the
             // new state
