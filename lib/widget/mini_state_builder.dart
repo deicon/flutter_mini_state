@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-typedef StateBuilder<STATE> = Widget Function(
-    BuildContext context, STATE value, Widget? child);
+typedef StateBuilder<STATEHOLDER, STATE> = Widget Function(
+    BuildContext context, STATE value, STATEHOLDER stateHolder, Widget? child);
 
 typedef StateListener<STATE> = void Function(BuildContext context, STATE value);
 
@@ -22,7 +22,8 @@ class MiniStateBuilder<STATEHOLDER extends Object, STATE>
           if (listener != null) {
             listener!(context, value);
           }
-          return builder(context, value, child);
+          return builder(
+              context, value, GetIt.instance.get<STATEHOLDER>(), child);
         });
   }
 }
