@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ministate/ministate.dart';
-import 'package:ministate/state/getit_state_holder.dart';
 
 // create Some State
 class SomeState extends Equatable {
